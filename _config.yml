@@ -118,15 +118,12 @@ author:
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "I'm big on engineering"
   location         : "Seoul, Korea"
-  email            : 
+  email            : "songmanship12@gmail.com"
   # fediverse      : "@you@instance.social"  # used for fediverse:creator meta tag
-  links:
-    - label: "Email"
+  links: 
+    - label: "songmanship12@gmail.com"
       icon: "fas fa-fw fa-square-envelope"
-      url: "songmanship12@gmail.com"
-    # - label: "Website"
-    #   icon: "fas fa-fw fa-link"
-    #   # url: "https://your-website.com"
+      # url: "songmanship12@gmail.com"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/sswoook"
