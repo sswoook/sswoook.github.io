@@ -1,9 +1,14 @@
 # main links
 main:
+  - title: "<i class='fa-solid fa-magnifying-glass'></i>"
+    url: /search/
+  - title: "<i class='fa-regular fa-calendar-days'></i>"
+    url: /year-archive/
   - title: "태그"
     url: /tags/
   - title: "카테고리"
     url: /categories/
+
 
   # - title: "Sample Posts"
   #   url: /year-archive/

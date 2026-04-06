@@ -115,7 +115,7 @@ analytics:
 # Site Author
 author:
   name             : "SW.S"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/assets/images/swjourney_avatar.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "I'm big on engineering"
   location         : "Seoul, Korea"
   email            : 
@@ -318,5 +318,7 @@ defaults:
       share: false
       related: true
       show_date: true
-
+      toc: true
+      toc_sticky: true
+      
 date_format: "%Y-%m-%d"
