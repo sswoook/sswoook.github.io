@@ -617,7 +617,7 @@ ko: &DEFAULT_KO
   comments_label             : "댓글 남기기"
   comments_title             : "댓글"
   more_label                 : "더 보기"
-  related_label              : "참고"
+  related_label              : "다른 글"
   follow_label               : 
   feed_label                 : "Feed"
   powered_by                 : "제작 지원: "
