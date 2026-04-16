@@ -1,3 +1,48 @@
 <!-- start custom footer snippets -->
 
 <!-- end custom footer snippets -->
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div style="text-align: center; font-size: 0.5rem; color: gray; margin-top: 20px;">
+  <span id="busuanzi_container_site_uv">
+    전체 방문자 수 - <span id="busuanzi_value_site_uv"></span> 명
+  </span> | 
+  <span id="busuanzi_container_site_pv">
+    전체 조회 수 - <span id="busuanzi_value_site_pv"></span> 명 
+  </span>
+</div>
+
+<script>
+  let checkCount = 0;
+  
+  // 0.1초(100ms)마다 Busuanzi가 숫자를 가져왔는지 확인합니다.
+  const interval = setInterval(function() {
+    const uvEl = document.getElementById('busuanzi_value_site_uv');
+    const pvEl = document.getElementById('busuanzi_value_site_pv');
+    let formatted = false;
+
+    // 방문자 수 요소가 존재하고, 아직 콤마가 없다면 변환
+    if (uvEl && uvEl.innerText !== "" && !uvEl.innerText.includes(',')) {
+      const uvNum = parseInt(uvEl.innerText, 10);
+      if (!isNaN(uvNum)) {
+        uvEl.innerText = uvNum.toLocaleString(); // 콤마 찍기
+        formatted = true;
+      }
+    }
+
+    // 조회 수 요소가 존재하고, 아직 콤마가 없다면 변환
+    if (pvEl && pvEl.innerText !== "" && !pvEl.innerText.includes(',')) {
+      const pvNum = parseInt(pvEl.innerText, 10);
+      if (!isNaN(pvNum)) {
+        pvEl.innerText = pvNum.toLocaleString(); // 콤마 찍기
+        formatted = true;
+      }
+    }
+
+    checkCount++;
+    
+    // 변환이 완료되었거나, 5초(50회) 이상 지났으면 감시를 종료합니다.
+    if (formatted || checkCount > 50) {
+      clearInterval(interval);
+    }
+  }, 100);
+</script>
